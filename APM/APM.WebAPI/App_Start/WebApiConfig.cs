@@ -22,10 +22,13 @@ namespace APM.WebAPI
 
             config.EnableCors();
 
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
+                new CamelCasePropertyNamesContractResolver();
+  
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { search = RouteParameter.Optional }
             );
         }
     }
