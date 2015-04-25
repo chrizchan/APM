@@ -10,7 +10,7 @@ using APM.WebAPI.Models;
 
 namespace APM.WebAPI.Controllers
 {
-    [EnableCorsAttribute("http://localhost:38289", "*", "GET,POST,PUT,DELETE")]
+    [EnableCorsAttribute("http://localhost:38289", "*", "*")]
     public class ProductsController : ApiController
     {
         // GET: api/Products
