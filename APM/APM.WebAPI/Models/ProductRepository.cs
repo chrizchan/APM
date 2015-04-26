@@ -50,7 +50,7 @@ namespace APM.WebAPI.Models
             // Read in the existing products
             var products = this.Retrieve();
 
-            // Assign a new Id
+            // Assign a new ProductId
             var maxId = products.Max(p => p.ProductId);
             product.ProductId = maxId + 1;
             products.Add(product);
